@@ -5,9 +5,9 @@ az webapp create --name tailspin-space-game-web-dev-thinh --plan tailspin-space-
 
 
 
-az webapp create --name tailspin-space-game-web-test-thinh --plan tailspin-space-game-web-1234 --resource-group tailspin-space-game-rg --runtime "DOTNETCORE|3.1"
+az webapp create --name tailspin-space-game-web-test-thinh --plan tailspin-space-game-web-plan --resource-group tailspin-space-game-rg --runtime "DOTNETCORE|Latest"
 
-az webapp create --name tailspin-space-game-web-staging-thinh --plan tailspin-space-game-web-1234 --resource-group tailspin-space-game-rg --runtime "DOTNETCORE|LTS"
+az webapp create --name tailspin-space-game-web-staging-thinh --plan tailspin-space-game-web-plan --resource-group tailspin-space-game-rg --runtime "DOTNETCORE|LTS"
 
 
 az webapp list --resource-group tailspin-space-game-rg --query "[].{hostName: defaultHostName, state: state, runtime: runtime}" --output table
